@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    background-color: #fff;
+    align-items: stretch;
+}
+
+.leftSectionWrapper {
+    display: flex;
+    flex: 1 0;
+    justify-content: flex-end;
+    height: 100dvh;
+}
+
+
+.leftSection {
+    background-color: orange;
+    width: 275px;
+    height: 100%;
+}
+.rightSectionWrapper {
+    display: flex;
+    flex: 1;
+    height: 100dvh;
+}
+
+.main {
+    width: 600px;
+    /*margin-right: 40px;*/
+}
+
+.rightSectionInner {
+    background-color: aqua;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.rightSection {
+    background-color: blue;
+    width: 350px;
+    height: 100%;
+}
