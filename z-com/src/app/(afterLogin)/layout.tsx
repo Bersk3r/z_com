@@ -7,7 +7,9 @@ import NavMenu from "@/app/(afterLogin)/_component/NavMenu";
 import LogoutButton from "@/app/(afterLogin)/_component/LogOutButton";
 import TrendSection from "@/app/(afterLogin)/_component/TrendSection";
 import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
-export default async function AfterLoginLayout({children}: {  children: ReactNode }) {
+
+type Props = { children: ReactNode, modal: ReactNode }
+export default async function AfterLoginLayout({ children, modal }: Props) {
     return (
         <div className={style.container}>
             <header className={style.leftSectionWrapper}>
@@ -22,7 +24,7 @@ export default async function AfterLoginLayout({children}: {  children: ReactNod
                            <ul>
                               <NavMenu />
                            </ul>
-                           <Link href="/compose/tweet" className={style.postButton}>게시하기</Link>
+                            <Link href="/compose/tweet" className={style.postButton}>게시하기</Link>
                         </nav>
                         <LogoutButton />
                     </div>
@@ -54,6 +56,7 @@ export default async function AfterLoginLayout({children}: {  children: ReactNod
                     </section>
                 </div>
             </div>
+            {modal}
         </div>
     );
 }
